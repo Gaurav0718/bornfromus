@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Born From Us">
+  <!-- Brand mark: gold outlined rounded-rectangle (pill/capsule) motif on navy, per brief 3.4 -->
+  <rect width="64" height="64" rx="12" fill="#1B2E48"/>
+  <rect x="14" y="22" width="36" height="20" rx="10" fill="none" stroke="#C9A35C" stroke-width="3"/>
+</svg>

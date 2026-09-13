@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ================= SEO ================= -->
+  <title>Born From Us: AI Is the Mirror. The Decision Is Still Yours.</title>
+  <meta name="description" content="An honest guide for the people who have to make the call. A new business book on AI by Ritesh Dogra and Priya Setty. Join the list to be notified at launch." />
+  <link rel="canonical" href="https://bornfromus.com/" />
+
+  <!-- ============ Open Graph / social ============ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Born From Us" />
+  <meta property="og:title" content="Born From Us: AI Is the Mirror. The Decision Is Still Yours." />
+  <meta property="og:description" content="An honest guide for the people who have to make the call. A new business book on AI by Ritesh Dogra and Priya Setty." />
+  <meta property="og:url" content="https://bornfromus.com/" />
+  <!-- Share image: the "Coming Soon" teaser card (1080x1350). Swap to a 1200x630 crop later if desired. -->
+  <meta property="og:image" content="https://bornfromus.com/assets/coming-soon.jpg" />
+  <meta property="og:image:alt" content="Born From Us book cover: two hands touching fingertips across glass at sunset over a city skyline." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Born From Us: AI Is the Mirror. The Decision Is Still Yours." />
+  <meta name="twitter:description" content="An honest guide for the people who have to make the call. By Ritesh Dogra and Priya Setty." />
+  <meta name="twitter:image" content="https://bornfromus.com/assets/coming-soon.jpg" />
+
+  <meta name="theme-color" content="#1B2E48" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- ============ Fonts: Playfair Display (display) + Archivo (body/UI) ============ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- ============================================================
+       ANALYTICS PLACEHOLDER  (Section 9 of the brief)
+       Ritesh hasn't chosen a tool yet. When he does, paste the
+       privacy-respecting snippet here. Two ready examples:
+
+       Plausible (recommended, cookieless):
+       <script defer data-domain="bornfromus.com"
+               src="https://plausible.io/js/script.js"></script>
+
+       Google Analytics 4:
+       <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+       <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+       gtag('js',new Date());gtag('config','G-XXXXXXX');</script>
+       ============================================================ -->
+</head>
+<body>
+  <a class="skip-link" href="#about-the-book">Skip to content</a>
+
+  <!-- ===================== STICKY NAV ===================== -->
+  <header class="nav" id="nav" data-state="top">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#hero" aria-label="Born From Us home">
+        <span class="nav__wordmark">Born From Us</span>
+        <!-- Gold pill/capsule brand motif (per brief 3.4) -->
+        <span class="pill" aria-hidden="true"></span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#about-the-book">About</a>
+        <a href="#inside">Inside the Book</a>
+        <a href="#foreword">Foreword</a>
+        <a href="#authors">Authors</a>
+      </nav>
+
+      <a href="#notify" class="btn btn--outline nav__cta">Get notified</a>
+
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile dropdown menu -->
+    <nav class="nav__mobile" id="mobileMenu" aria-label="Mobile" hidden>
+      <a href="#about-the-book">About</a>
+      <a href="#inside">Inside the Book</a>
+      <a href="#foreword">Foreword</a>
+      <a href="#authors">Authors</a>
+      <a href="#notify" class="btn btn--solid">Get notified</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========================= HERO ========================= -->
+    <section id="hero" class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow eyebrow--gold">Born From Us</p>
+          <h1 class="hero__title">
+            AI is the mirror.<br />
+            <span class="u-underline">The decision is still yours.</span>
+          </h1>
+          <p class="hero__lede">An honest guide for the people who have to make the call.</p>
+          <p class="hero__authors">Ritesh Dogra &middot; Priya Setty</p>
+          <div class="hero__actions">
+            <a href="#notify" class="btn btn--solid">Get notified at launch <span aria-hidden="true">&rarr;</span></a>
+            <a href="#about-the-book" class="btn btn--ghost">Read the story behind the book</a>
+          </div>
+        </div>
+
+        <div class="hero__art">
+          <!-- Finished front cover, shown as the book object. Meaningful alt text (brief 9). -->
+          <img
+            src="assets/cover.jpg"
+            width="1024" height="1536"
+            fetchpriority="high"
+            alt="Cover of Born From Us: two hands almost touching at the fingertips, one real and one a reflection in glass, over a sunset city skyline. Title Born From Us, tagline AI is the Mirror. The Decision Is Still Yours, by Ritesh Dogra and Priya Setty." />
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT / THE MIRROR ==================== -->
+    <section id="about-the-book" class="section section--cream about">
+      <div class="wrap">
+        <p class="eyebrow">The argument in one line</p>
+        <h2 class="about__hed">
+          AI is not a stranger,<br />
+          and it isn&rsquo;t a god.
+        </h2>
+        <p class="about__mirror">It&rsquo;s a mirror. <span class="u-underline">And the work was never about the machine.</span></p>
+
+        <div class="about__body">
+          <p>Every business leader is expected to have a point of view on artificial intelligence, and most are working from a mix of hype, fear, and half-understood headlines. <span class="nowrap">Born From Us</span> cuts through both the utopian and doomsday narratives to explain what AI actually is, where it genuinely changes the game, and where it doesn&rsquo;t.</p>
+          <p>Drawing on real examples, including from life sciences and healthcare, Ritesh Dogra and Priya Setty debunk the most common myths leaders carry into boardrooms, and offer a way to ask sharper questions instead of chasing simple answers.</p>
+        </div>
+
+        <!-- THE THROUGH-LINE: three questions -->
+        <p class="through-line__label">The through-line: the three questions that survive every room</p>
+        <ul class="through-line">
+          <li><span class="through-line__num">01</span>What is it doing?</li>
+          <li><span class="through-line__num">02</span>What is it reflecting?</li>
+          <li><span class="through-line__num">03</span>Who&rsquo;s responsible when it&rsquo;s wrong?</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================== INSIDE THE BOOK ==================== -->
+    <section id="inside" class="section section--navy inside">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--gold">Inside the book</p>
+        <h2 class="inside__hed">
+          Twenty-five short, story-driven chapters.<br />
+          <span class="u-underline">Five parts. No jargon required.</span>
+        </h2>
+        <p class="inside__intro">It draws on real, specific stories from healthcare, regulatory work, parenting, aviation, and ordinary life, not because the lessons are industry-specific, but because they aren&rsquo;t. If you run a business, you&rsquo;ll recognize every one of them.</p>
+
+        <!-- Five parts as accordions. First open by default. -->
+        <div class="parts">
+          <details class="part" open>
+            <summary>
+              <span class="part__kicker">Part One</span>
+              <span class="part__title">What AI Actually Is</span>
+              <span class="part__meta">Chapters 1&ndash;6</span>
+            </summary>
+            <ol class="chapters" start="1">
+              <li class="chapter"><span class="chapter__num">1</span><div><h3>AI Is Not God. It Was Born From Us</h3><p>It reasons in patterns because we handed it our patterns.</p></div></li>
+              <li class="chapter"><span class="chapter__num">2</span><div><h3>Stop Calling It &ldquo;AI&rdquo;: The Machines Wearing One Name</h3><p>Four machines wear one name, and you&rsquo;re governing the wrong one.</p></div></li>
+              <li class="chapter"><span class="chapter__num">3</span><div><h3>When You Train Something, You Don&rsquo;t Always Get What You Trained For</h3><p>Evolution wanted survival. It got ice cream. Goal and behavior drift apart.</p></div></li>
+              <li class="chapter"><span class="chapter__num">4</span><div><h3>A Bad Process, Now at the Speed of Light</h3><p>Amplify a weak process and you get a catastrophe with excellent uptime.</p></div></li>
+              <li class="chapter"><span class="chapter__num">5</span><div><h3>The Determinism We Never Actually Had</h3><p>The determinism we thought we had was never really there.</p></div></li>
+              <li class="chapter"><span class="chapter__num">6</span><div><h3>Garbage Context, Confident Answer</h3><p>The answer is only as good as the context you build around the question.</p></div></li>
+            </ol>
+          </details>
+
+          <details class="part">
+            <summary>
+              <span class="part__kicker">Part Two</span>
+              <span class="part__title">The Human in the Picture</span>
+              <span class="part__meta">Chapters 7&ndash;13</span>
+            </summary>
+            <ol class="chapters" start="7">
+              <li class="chapter"><span class="chapter__num">7</span><div><h3>The Fastest Way to Get Dumber</h3><p>Let something else be smart for you, and you lose the muscle that made the answer.</p></div></li>
+              <li class="chapter"><span class="chapter__num">8</span><div><h3>Kicking Away the Ladder</h3><p>The tool hands juniors the top rung and none of the climb that built judgment.</p></div></li>
+              <li class="chapter"><span class="chapter__num">9</span><div><h3>You Don&rsquo;t Know Your Own Domain, and You Think AI Will</h3><p>You thought you had a standard. You had a vibe. AI gives you the exam.</p></div></li>
+              <li class="chapter"><span class="chapter__num">10</span><div><h3>The Double Standard We Never Named</h3><p>The double standard we judge by, and never named.</p></div></li>
+              <li class="chapter"><span class="chapter__num">11</span><div><h3>&ldquo;Human in the Loop&rdquo;: There Was Never Just One</h3><p>Give one draft to four experts and you get four standards.</p></div></li>
+              <li class="chapter"><span class="chapter__num">12</span><div><h3>Children of the Magenta Line</h3><p>Aviation learned it first, with lives attached: pilots who forgot flying was their job.</p></div></li>
+              <li class="chapter"><span class="chapter__num">13</span><div><h3>Nobody Signed Up to Be the Babysitter</h3><p>Oversight decays into rubber-stamping unless you design it to mean something.</p></div></li>
+            </ol>
+          </details>
+
+          <details class="part">
+            <summary>
+              <span class="part__kicker">Part Three</span>
+              <span class="part__title">Trust, Evidence, and Ownership</span>
+              <span class="part__meta">Chapters 14&ndash;18</span>
+            </summary>
+            <ol class="chapters" start="14">
+              <li class="chapter"><span class="chapter__num">14</span><div><h3>The Rumor Outruns the Rollout</h3><p>What people believe it does travels faster than what it actually does.</p></div></li>
+              <li class="chapter"><span class="chapter__num">15</span><div><h3>Failure Is Not the Same as Unproven Success</h3><p>We bury capable systems and call it proof they never worked.</p></div></li>
+              <li class="chapter"><span class="chapter__num">16</span><div><h3>Everybody Owns a Piece. Nobody Owns the Outcome.</h3><p>Until a name is the answer, you have four guarded boxes, not an initiative.</p></div></li>
+              <li class="chapter"><span class="chapter__num">17</span><div><h3>The Irony of Evals: One System Grading Another</h3><p>To know if an AI is any good, we use other AIs to grade it.</p></div></li>
+              <li class="chapter"><span class="chapter__num">18</span><div><h3>Broccoli on the Pizza: Why Transparency Isn&rsquo;t a Binder</h3><p>The broccoli is easiest to miss on the pizza that looks perfect from the top.</p></div></li>
+            </ol>
+          </details>
+
+          <details class="part">
+            <summary>
+              <span class="part__kicker">Part Four</span>
+              <span class="part__title">Building Something Real</span>
+              <span class="part__meta">Chapters 19&ndash;21</span>
+            </summary>
+            <ol class="chapters" start="19">
+              <li class="chapter"><span class="chapter__num">19</span><div><h3>Quick Build, Unending Fixes</h3><p>Skipping the engineering is like skipping the pregnancy. The demo is only the ultrasound.</p></div></li>
+              <li class="chapter"><span class="chapter__num">20</span><div><h3>Where It Actually Shines</h3><p>Held to everything this book asks for, it&rsquo;s the sharpest colleague the work has had.</p></div></li>
+              <li class="chapter"><span class="chapter__num">21</span><div><h3>Your Data Is Your Problem, Not AI&rsquo;s</h3><p>Data isn&rsquo;t a substance you pour in. It&rsquo;s a pile of decisions nobody remembers making.</p></div></li>
+            </ol>
+          </details>
+
+          <details class="part">
+            <summary>
+              <span class="part__kicker">Part Five</span>
+              <span class="part__title">The Guardrails Nobody Sees</span>
+              <span class="part__meta">Chapters 22&ndash;25</span>
+            </summary>
+            <ol class="chapters" start="22">
+              <li class="chapter"><span class="chapter__num">22</span><div><h3>Correct Is Not the Same As Useful</h3><p>A model can answer its question perfectly and still change nothing in the world.</p></div></li>
+              <li class="chapter"><span class="chapter__num">23</span><div><h3>Design Is Governance</h3><p>The decisions that make a system safe were made long before any review board saw it.</p></div></li>
+              <li class="chapter"><span class="chapter__num">24</span><div><h3>Some Decisions Can&rsquo;t Be Learned</h3><p>Precedent is a record, not a license. Some judgment only ever gets lived through.</p></div></li>
+              <!-- Chapter 25 title per final manuscript ("Finally, Some Decisions Can't Be Undone"); internal "Bhasmasura Problem" framing intentionally omitted. -->
+              <li class="chapter"><span class="chapter__num">25</span><div><h3>Finally, Some Decisions Can&rsquo;t Be Undone</h3><p>The power was never the problem. The absence of wisdom was.</p></div></li>
+            </ol>
+          </details>
+        </div>
+
+        <p class="inside__afterword">Plus an afterword: <em>Your First 90 Days</em>.</p>
+      </div>
+    </section>
+
+    <!-- ==================== FOREWORD ==================== -->
+    <section id="foreword" class="section section--navy-deep foreword">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--gold">From the foreword</p>
+
+        <blockquote class="pullquote pullquote--lead">
+          <p>&ldquo;The technology is rarely the hard part.<br />The hard part is us.&rdquo;</p>
+        </blockquote>
+
+        <blockquote class="pullquote">
+          <p>&ldquo;These systems are not visitors from another world. They are mirrors. They are born from our data, our processes, our decisions, and our blind spots, and they reflect all of it back to us at a scale no human could manage alone. I have rarely seen this point made so plainly, or so usefully, for the people who most need to hear it.&rdquo;</p>
+          <footer class="pullquote__cite">
+            Professor D.V.R. Seshadri<br />
+            <span>Professor of Marketing (Practice), Indian School of Business</span>
+          </footer>
+        </blockquote>
+
+        <blockquote class="pullquote pullquote--secondary">
+          <p>&ldquo;It is written in plain language. It is built around real situations rather than jargon. And it has the courage to tell leaders what they would rather not hear: that no one in the organisation quite owns the outcome, that the data problem is their problem and not the vendor&rsquo;s, and that they do not understand their own field as well as they assume.&rdquo;</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ==================== AUTHORS ==================== -->
+    <section id="authors" class="section section--cream authors">
+      <div class="wrap">
+        <p class="eyebrow">The authors</p>
+        <h2 class="authors__hed">Two people, <span class="u-underline">the same three questions.</span></h2>
+
+        <div class="authors__grid">
+          <!-- Ritesh -->
+          <article class="author">
+            <!-- Real headshot in place (assets/ritesh-dogra-headshot.jpg, centered
+                 square crop). The onerror handler stays as a safety net: if the
+                 file ever goes missing it swaps in a gold-ring "RD" monogram
+                 rather than showing a broken image. -->
+            <div class="author__photo" data-initials="RD">
+              <img src="assets/ritesh-dogra-headshot.jpg" alt="Ritesh Dogra" width="200" height="200"
+                   onerror="this.closest('.author__photo').classList.add('author__photo--fallback');this.remove();" />
+            </div>
+            <h3 class="author__name">Ritesh Dogra</h3>
+            <p class="author__cred">PGDM, Indian School of Business &middot; Executive education, IIM Ahmedabad and Harvard Business School</p>
+            <p class="author__bio">Ritesh Dogra has spent nearly two decades doing the same essential work in different settings: finding what actually works when domain expertise meets an emerging technology, and building the thing that proves it. He founded TalkDoc.AI in 2020, one of the first Made-in-India NLP platforms built for healthcare, built Indegene&rsquo;s GenAI practice from the ground up into a capability serving a dozen-plus global life sciences clients, and in late 2025 co-founded Alethic Insights, where he builds AI-native products for enterprise clients today.</p>
+          </article>
+
+          <!-- Priya -->
+          <article class="author">
+            <div class="author__photo" data-initials="PS">
+              <img src="assets/priya-setty-headshot.jpg" alt="Priya Setty" width="200" height="200"
+                   onerror="this.closest('.author__photo').classList.add('author__photo--fallback');this.remove();" />
+            </div>
+            <h3 class="author__name">Priya Setty</h3>
+            <p class="author__cred">MBA &middot; PMP &middot; RAC-Devices</p>
+            <p class="author__bio">Geethapriya &ldquo;Priya&rdquo; Setty started as a pediatric occupational therapist, watching how children build judgment slowly, through hundreds of small situations, rather than by rule. That lens followed her into medical-device regulatory affairs, where she has spent years on global submissions, quality systems, and, for the last several years, AI governance and validation in regulated healthcare. She&rsquo;s a Global Regulatory Affairs Manager, holds an MBA, a PMP, and RAC-Devices credentials, and lives in San Diego with her husband and two kids, who can deflate any sufficiently abstract sentence about AI within about four seconds, usually by asking if dinner&rsquo;s ready.</p>
+          </article>
+        </div>
+
+        <!-- Editor credit -->
+        <div class="editor">
+          <p class="eyebrow">Edited by</p>
+          <h3 class="editor__name">Astha Sharma</h3>
+          <p class="editor__bio">Astha Sharma is a case author and researcher at the <a href="https://cases.isb.edu/category.html?author%5B0%5D=Astha+Sharma&amp;author%5B2%5D=Anand+Tatambothla" target="_blank" rel="noopener noreferrer">Indian School of Business (ISB)</a>, where she has co-authored multiple business and management case studies distributed through Harvard Business Publishing. She works closely with ISB&rsquo;s research centers and faculty, often collaborating with management experts including Professor D.V.R. Seshadri, and her writing centers on real-world business challenges in emerging markets: digital transformation, healthcare innovation, and strategic disruption. Her cases include <em>Scaling Digital Transformation: Growing LVPEI&rsquo;s eyeSmart EMR</em>, on how the L.V. Prasad Eye Institute scaled its electronic medical record system, and <em>Reliance Jio: Ultimate Datagiri</em>, on Jio&rsquo;s entry into Indian telecom. She brought that same eye, for where the real story is and where it&rsquo;s easy to miss, to editing this manuscript.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== NOTIFY / EMAIL CAPTURE ==================== -->
+    <section id="notify" class="section section--navy notify">
+      <div class="wrap wrap--narrow">
+        <p class="eyebrow eyebrow--gold">Be the first to know</p>
+        <h2 class="notify__hed">
+          The book isn&rsquo;t out yet.<br />
+          <span class="u-underline">You can be.</span>
+        </h2>
+        <p class="notify__lede">Leave your email and we&rsquo;ll tell you the moment <span class="nowrap">Born From Us</span> is available. Nothing else, no spam, unsubscribe anytime.</p>
+
+        <form id="notifyForm" class="notify__form" novalidate>
+          <label class="sr-only" for="email">Email address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            inputmode="email"
+            autocomplete="email"
+            placeholder="you@example.com"
+            required
+            aria-describedby="formMsg formMicro" />
+          <button type="submit" class="btn btn--solid">Notify me <span aria-hidden="true">&rarr;</span></button>
+        </form>
+
+        <!-- Inline status region (validation + success/error), announced to screen readers -->
+        <p id="formMsg" class="notify__msg" role="status" aria-live="polite"></p>
+
+        <p id="formMicro" class="notify__micro">We&rsquo;ll also send the occasional real update: a foreword excerpt, a chapter, where to find it. Never more than once or twice a month.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <span class="footer__wordmark">Born From Us</span>
+        <span class="pill pill--gold" aria-hidden="true"></span>
+        <p class="footer__authors">Ritesh Dogra &amp; Priya Setty</p>
+      </div>
+
+      <div class="footer__contact">
+        <!-- Author LinkedIn profiles (real URLs supplied). -->
+        <nav class="footer__social" aria-label="Social links">
+          <a href="https://www.linkedin.com/in/dograritesh/" target="_blank" rel="noopener noreferrer" aria-label="Ritesh Dogra on LinkedIn (opens in a new tab)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            <span>Ritesh</span>
+          </a>
+          <a href="https://www.linkedin.com/in/geethapriyasetty/" target="_blank" rel="noopener noreferrer" aria-label="Priya Setty on LinkedIn (opens in a new tab)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            <span>Priya</span>
+          </a>
+        </nav>
+        <p class="footer__reach">Reach the authors on LinkedIn.</p>
+      </div>
+    </div>
+
+    <div class="wrap footer__legal">
+      <p>&copy; 2026 Ritesh Dogra &amp; Priya Setty. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js?v=2"></script>
+</body>
+</html>
