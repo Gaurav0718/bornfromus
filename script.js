@@ -31,9 +31,12 @@ const NEWSLETTER_ENDPOINT = "REPLACE_ME";
 const NEWSLETTER_PROVIDER = "buttondown"; // "buttondown" | "convertkit"
 
 /* ============================================================
-   NOTIFY-THE-AUTHORS relay (FormSubmit.co - no backend needed)
+   PRE-ORDER relay (FormSubmit.co - no backend needed)
    ------------------------------------------------------------
-   Every signup emails both authors that a reader wants the book.
+   Every signup does two things via one FormSubmit request:
+     1. Emails both authors that a reader wants the book (_cc).
+     2. Auto-replies to the reader with the pre-order link
+        and a short message (_autoresponse).
    Primary recipient goes in the URL; second via the _cc field.
    FormSubmit sends a ONE-TIME activation email to the primary
    address on the first submission - Ritesh must click that link
@@ -42,17 +45,29 @@ const NEWSLETTER_PROVIDER = "buttondown"; // "buttondown" | "convertkit"
 const NOTIFY_PRIMARY = "dogra.ritesh@gmail.com";
 const NOTIFY_CC = "onlypriyask@gmail.com";
 const NOTIFY_ENDPOINT = "https://formsubmit.co/ajax/" + NOTIFY_PRIMARY;
+const PREORDER_URL = "https://anantapress.com/born-from-us/";
+
+const AUTORESPONSE =
+  "Thank you for your interest in Born From Us by Ritesh Dogra and Priya Setty.\n\n" +
+  "You can pre-order your copy here:\n" +
+  PREORDER_URL +
+  "\n\n" +
+  "AI is the mirror. The decision is still yours. We hope the book helps you " +
+  "ask sharper questions inside your own organisation.\n\n" +
+  "Warmly,\nThe Born From Us team";
 
 async function notifyAuthors(email) {
   const res = await fetch(NOTIFY_ENDPOINT, {
     method: "POST",
     headers: { "Content-Type": "application/json", Accept: "application/json" },
     body: JSON.stringify({
+      email: email, // used by FormSubmit as the reply-to / autoresponse recipient
       _cc: NOTIFY_CC,
-      _subject: "Born From Us - new reader interested",
+      _subject: "Born From Us - new pre-order lead",
       _template: "table",
+      _autoresponse: AUTORESPONSE,
       "Reader email": email,
-      Message: email + " signed up to be notified when Born From Us launches.",
+      Message: email + " requested the Born From Us pre-order link.",
     }),
   });
   return res.ok;
@@ -128,7 +143,7 @@ form.addEventListener("submit", async (e) => {
     if (ok) {
       // Success state per brief 6.6 - replace the form with a calm confirmation.
       form.hidden = true;
-      showMessage("You're on the list. We'll email you the moment it's live.", "success");
+      showMessage("Check your inbox — we've sent you the pre-order link.", "success");
     } else {
       throw new Error("Provider rejected the request");
     }
