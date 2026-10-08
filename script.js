@@ -31,11 +31,11 @@ const NEWSLETTER_ENDPOINT = "REPLACE_ME";
 const NEWSLETTER_PROVIDER = "buttondown"; // "buttondown" | "convertkit"
 
 /* ============================================================
-   PRE-ORDER relay (FormSubmit.co - no backend needed)
+   ORDER-LINK relay (FormSubmit.co - no backend needed)
    ------------------------------------------------------------
    Every signup does two things via one FormSubmit request:
      1. Emails both authors that a reader wants the book (_cc).
-     2. Auto-replies to the reader with the pre-order link
+     2. Auto-replies to the reader with both order links
         and a short message (_autoresponse).
    Primary recipient goes in the URL; second via the _cc field.
    FormSubmit sends a ONE-TIME activation email to the primary
@@ -45,13 +45,14 @@ const NEWSLETTER_PROVIDER = "buttondown"; // "buttondown" | "convertkit"
 const NOTIFY_PRIMARY = "dogra.ritesh@gmail.com";
 const NOTIFY_CC = "onlypriyask@gmail.com";
 const NOTIFY_ENDPOINT = "https://formsubmit.co/ajax/" + NOTIFY_PRIMARY;
-const PREORDER_URL = "https://anantapress.com/born-from-us/";
+const ORDER_URL_INDIA = "https://www.amazon.in/dp/B0H2F9LHBZ?ref=cm_sw_r_ffobk_cp_ud_dp_WABTY2C96FKTB54PPGPY&ref_=cm_sw_r_ffobk_cp_ud_dp_WABTY2C96FKTB54PPGPY&social_share=cm_sw_r_ffobk_cp_ud_dp_WABTY2C96FKTB54PPGPY&bestFormat=true";
+const ORDER_URL_GLOBAL = "https://www.amazon.com/dp/B0HL4GW2VC?ref=cm_sw_r_ffobk_cp_ud_dp_Y13N4TATFMY8BZJAC958&ref_=cm_sw_r_ffobk_cp_ud_dp_Y13N4TATFMY8BZJAC958&social_share=cm_sw_r_ffobk_cp_ud_dp_Y13N4TATFMY8BZJAC958&bestFormat=true";
 
 const AUTORESPONSE =
   "Thank you for your interest in Born From Us by Ritesh Dogra and Priya Setty.\n\n" +
-  "You can pre-order your copy here:\n" +
-  PREORDER_URL +
-  "\n\n" +
+  "Born From Us is out now. Order your copy here:\n\n" +
+  "India (Amazon.in):\n" + ORDER_URL_INDIA + "\n\n" +
+  "Rest of the world (Amazon.com):\n" + ORDER_URL_GLOBAL + "\n\n" +
   "AI is the mirror. The decision is still yours. We hope the book helps you " +
   "ask sharper questions inside your own organisation.\n\n" +
   "Warmly,\nThe Born From Us team";
@@ -63,14 +64,19 @@ async function notifyAuthors(email) {
     body: JSON.stringify({
       email: email, // used by FormSubmit as the reply-to / autoresponse recipient
       _cc: NOTIFY_CC,
-      _subject: "Born From Us - new pre-order lead",
+      _subject: "Born From Us - new reader lead",
       _template: "table",
       _autoresponse: AUTORESPONSE,
       "Reader email": email,
-      Message: email + " requested the Born From Us pre-order link.",
+      Message: email + " requested the Born From Us order links.",
     }),
   });
-  return res.ok;
+  // FormSubmit answers HTTP 200 even when it refuses to send (e.g. the form
+  // is not activated yet), so check the "success" flag in the JSON body.
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok || String(data.success) !== "true") {
+    throw new Error(data.message || "FormSubmit rejected the request (HTTP " + res.status + ")");
+  }
 }
 
 /* ---------------- Sticky nav: state on scroll ---------------- */
@@ -139,14 +145,10 @@ form.addEventListener("submit", async (e) => {
   showMessage("", "");
 
   try {
-    const ok = await notifyAuthors(email);
-    if (ok) {
-      // Success state per brief 6.6 - replace the form with a calm confirmation.
-      form.hidden = true;
-      showMessage("Check your inbox — we've sent you the pre-order link.", "success");
-    } else {
-      throw new Error("Provider rejected the request");
-    }
+    await notifyAuthors(email);
+    // Success state per brief 6.6 - replace the form with a calm confirmation.
+    form.hidden = true;
+    showMessage("Check your inbox — we've sent you the order links.", "success");
   } catch (err) {
     console.error("Signup failed:", err);
     submitBtn.disabled = false;

@@ -34,7 +34,7 @@ Each is also flagged with a comment in the code - search for the word in the fil
 | **Email provider endpoint** - form is in demo mode (logs to console). | `script.js` (top) | `NEWSLETTER_ENDPOINT` |
 | **Contact email** (`hello@bornfromus.com`) | `index.html` (footer) | `CONTACT EMAIL - PLACEHOLDER` |
 | **Analytics** snippet (Plausible / GA4) | `index.html` (`<head>`) | `ANALYTICS PLACEHOLDER` |
-| ISBN / retail links / release date | not on the page yet - the `#notify` list does this job for now | - |
+| Retail links (Amazon.in for India, Amazon.com worldwide) | `index.html` (`.order-buttons`, 3 places) + `script.js` (`ORDER_URL_INDIA` / `ORDER_URL_GLOBAL`) | `amazon.` |
 
 ### Wiring the email form (2-minute job)
 1. Create a free account at **Buttondown** or **ConvertKit/Kit**.

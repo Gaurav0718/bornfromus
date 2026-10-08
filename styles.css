@@ -143,6 +143,17 @@ summary:focus-visible {
 .btn--ghost:hover { color: var(--gold); }
 .btn:active { transform: translateY(1px); }
 
+/* Order buttons: India + worldwide, stacked at equal width */
+.order-buttons {
+  display: flex; flex-direction: column; gap: 0.75rem;
+  width: min(100%, 340px);
+}
+.btn--order { justify-content: space-between; gap: 1.25rem; }
+.btn__store {
+  font-weight: 500; letter-spacing: 0.04em; text-transform: none;
+  font-size: 0.85rem; opacity: 0.75;
+}
+
 /* ---------- Brand pill/capsule motif (brief 3.4) ---------- */
 .pill {
   display: inline-block; width: 26px; height: 13px;
@@ -264,7 +275,7 @@ summary:focus-visible {
   font-family: var(--serif); font-style: italic;
   color: var(--muted-on-navy); font-size: 1.05rem; margin: 0 0 2rem;
 }
-.hero__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; }
+.hero__actions { display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; }
 
 .hero__art { justify-self: center; }
 .hero__art img {
@@ -502,6 +513,13 @@ summary:focus-visible {
 .notify .wrap--narrow { display: flex; flex-direction: column; align-items: center; }
 .notify__hed { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 1.25rem; color: var(--cream); }
 .notify__lede { color: var(--muted-on-navy); max-width: 46ch; margin: 0 0 2rem; }
+.notify .order-buttons { margin: 0 auto; }
+.notify__lede--sub { margin: 2.75rem 0 1.25rem; font-size: 0.95rem; }
+.nav__mobile .order-buttons { width: 100%; margin-top: 0.75rem; }
+.nav__mobile .order-buttons .btn {
+  margin-top: 0; color: var(--navy); justify-content: space-between;
+  padding: 0.9rem 1.5rem; font-size: 0.82rem;
+}
 .notify__inline-link {
   color: var(--gold);
   text-decoration: underline;
